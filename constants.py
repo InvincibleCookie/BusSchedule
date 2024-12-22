@@ -1,0 +1,63 @@
+from datetime import timedelta
+# Константы
+N_OF_BUS: int = 8
+
+
+DAYS_IN_WEEK: int = 7
+WEEKDAYS_START: int = 0
+WEEKDAYS_END: int = 4
+
+PEAK_HOURS_MORNING_START: int = 6
+PEAK_HOURS_MORNING_END: int = 9
+PEAK_HOURS_EVENING_START: int = 17
+PEAK_HOURS_EVENING_END: int = 20
+REGULAR_HOURS_START: int = 9
+REGULAR_HOURS_END: int = 17
+NIGHT_HOURS_START: int = 20
+NIGHT_HOURS_END: int = 6
+
+N_OF_DRIVERS_EIGHT_SHIFT: int = 30
+N_OF_DRIVERS_TWELVE_SHIFT: int = 30
+
+HOUR_IN_DAY: int = 24
+SECONDS_IN_HOUR: int = 3600
+MIN_WORK_HOUR: int = 5
+MAX_WORK_HOUR: int = 22
+MINUTES_PER_HOUR: int = 60
+WEEKEND_REGULAR_START_HOUR: int = 10
+WEEKEND_REGULAR_END_HOUR: int = 23
+
+SIMULATION_DURATION: int = 9500
+
+SHIFT_DURATION_8H: timedelta = timedelta(hours=8)
+SHIFT_DURATION_12H: timedelta = timedelta(hours=12)
+WORKING_TIME_THRESHOLD_8H: timedelta = timedelta(hours=4)
+WORKING_TIME_THRESHOLD_12H_FIRST: timedelta = timedelta(hours=4)
+WORKING_TIME_THRESHOLD_12H_SECOND: timedelta = timedelta(hours=7)
+
+SIMULATION_START_HOURS: int = 6
+DISPATCH_BUSES_DEFAULT: int = 4
+DISPATCH_MINUTES: int = 5
+TIME_INCREMENT: timedelta = timedelta(minutes=1)
+INITIAL_DISPATCH_TIME: timedelta = timedelta(seconds=0)
+PLACEHOLDER_COLUMN: str = "placeholder"
+
+N_OF_STATIONS: int = 5
+DEFAULT_TO_NEXT = timedelta(minutes=12)
+FLOAT_ROAD_TIME: float = DEFAULT_TO_NEXT.total_seconds() // MINUTES_PER_HOUR * N_OF_STATIONS
+START_STATION = 0
+
+DEFAULT_SHIFT_DURATION_8H = timedelta(hours=8)
+DEFAULT_SHIFT_DURATION_12H = timedelta(hours=12)
+BREAK_DURATION_8H = timedelta(minutes=60)
+BREAK_DURATION_12H = timedelta(minutes=30)
+DAILY_BREAKS_8H = 1
+DAILY_BREAKS_12H = 2
+BETWEEN_SHIFTS_TIME = timedelta(hours=11)
+MAX_HOUR = 24
+DAY_OFF_DURATION_12H = timedelta(hours=48)
+
+
+PEAK_MULTIPLIER: float = 2
+REGULAR_MULTIPLIER: float = 8 / 3
+NIGHT_MULTIPLIER: float = 4.0
